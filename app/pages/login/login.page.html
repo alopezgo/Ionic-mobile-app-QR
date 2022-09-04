@@ -1,0 +1,29 @@
+<ion-header>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <ion-toolbar  class="colormarca">
+    <ion-title class="ion-padding" size="large">RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+<ion-img src="assets/images/login.svg"></ion-img>
+
+<ion-item class="ion-margin-top">
+  <ion-label position="floating">Usuario</ion-label>
+  <ion-input [(ngModel)] = "mdlusuario"></ion-input>
+</ion-item>
+
+<ion-item class="ion-margin-top">
+  <ion-label position="floating">Contraseña</ion-label>
+  <ion-input [(ngModel)] = "mdlcontrasena" type="password"></ion-input>
+</ion-item>
+
+<ion-button (click)="Ingresar()" (click)="navegar()" shape= "round" expand="block" class="ion-margin-top colormarca">
+  <ion-icon slot="start" name="lock-open"></ion-icon>Ingresar</ion-button>
+
+<a [routerLink]="['/recuperacion']" class="centrado">Recuperar contraseña</a>
+
+</ion-content>
+
